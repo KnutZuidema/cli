@@ -4,14 +4,14 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/go-clix/cli"
+	"github.com/KnutZuidema/cli"
 )
 
 // use a func to return a Command instead of
 // a global variable and `init()`
 func applyCmd() *cli.Command {
 	cmd := &cli.Command{
-		Use: "apply",
+		Use:   "apply",
 		Short: "apply the changes",
 	}
 
@@ -25,7 +25,7 @@ func applyCmd() *cli.Command {
 
 func main() {
 	rootCmd := &cli.Command{
-		Use: "subcommands",
+		Use:   "subcommands",
 		Short: "This command has sub commands.",
 	}
 	rootCmd.AddCommand(applyCmd())

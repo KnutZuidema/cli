@@ -1,4 +1,4 @@
-module github.com/go-clix/cli
+module github.com/KnutZuidema/cli
 
 go 1.14
 

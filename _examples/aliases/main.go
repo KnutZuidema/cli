@@ -4,23 +4,22 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/go-clix/cli"
+	"github.com/KnutZuidema/cli"
 )
 
 // Keep in mind that in `--help` outputs the command will still be called `apply`.
 
-
 func applyCmd() *cli.Command {
 	return &cli.Command{
-		Use: "apply",
+		Use:     "apply",
 		Aliases: []string{"make", "do"},
-		Short: "apply the changes",
+		Short:   "apply the changes",
 	}
 }
 
 func main() {
 	rootCmd := &cli.Command{
-		Use: "aliases",
+		Use:   "aliases",
 		Short: "Subcommand has aliases.",
 	}
 	rootCmd.AddCommand(applyCmd())

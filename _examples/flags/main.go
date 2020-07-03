@@ -4,33 +4,32 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/go-clix/cli"
+	"github.com/KnutZuidema/cli"
 )
 
 // A `pflag.FlagSet` can be accessed per command using `*Command.Flags()`:
 
 func applyCmd() *cli.Command {
-    cmd := &cli.Command{
-        Use: "apply",
-        Short: "apply the changes",
-    }
+	cmd := &cli.Command{
+		Use:   "apply",
+		Short: "apply the changes",
+	}
 
-    force := cmd.Flags().BoolP("force", "f", false, "skip checks")
+	force := cmd.Flags().BoolP("force", "f", false, "skip checks")
 
-    cmd.Run = func(cmd *cli.Command, args []string) error {
-        fmt.Println("applied", args[0])
-        if *force {
-            fmt.Println("The force was with us.")
-        }
-        return nil
-    }
-    return cmd
+	cmd.Run = func(cmd *cli.Command, args []string) error {
+		fmt.Println("applied", args[0])
+		if *force {
+			fmt.Println("The force was with us.")
+		}
+		return nil
+	}
+	return cmd
 }
-
 
 func main() {
 	rootCmd := &cli.Command{
-		Use: "kubectl",
+		Use:   "kubectl",
 		Short: "Kubernetes management tool",
 	}
 

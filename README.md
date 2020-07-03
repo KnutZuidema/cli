@@ -1,9 +1,9 @@
-# `go-clix`
+# `KnutZuidema`
 
 Cli-X is a command line library for Go, inspired by
 [`spf13/cobra`](https://github.com/spf13/cobra).
 
-- :package: **`struct` based API**: Similar to `cobra`, `go-clix/cli` features a `struct` based
+- :package: **`struct` based API**: Similar to `cobra`, `KnutZuidema/cli` features a `struct` based
   API for easy composition and discovery of available options.
 - :children_crossing: [**Subcommands**](#subcommands): `cli.Command` can be nested for a `git`
   like experience.
@@ -19,7 +19,7 @@ Cli-X is a command line library for Go, inspired by
 Add the library to your project:
 
 ```bash
-$ go get github.com/go-clix/cli
+$ go get github.com/KnutZuidema/cli
 ```
 
 Then set up your root command:
@@ -29,7 +29,7 @@ package main
 
 import (
     "fmt"
-    "github.com/go-clix/cli"
+    "github.com/KnutZuidema/cli"
 )
 
 func main() {
@@ -186,7 +186,7 @@ create your own.
 ```go
 import (
     "github.com/posener/complete"
-    "github.com/go-clix/cli"
+    "github.com/KnutZuidema/cli"
 )
 
 func logsCmd() *cli.Command {
@@ -226,7 +226,7 @@ Predefined options are also available:
 ```go
 import (
     "github.com/posener/complete"
-    "github.com/go-clix/cli"
+    "github.com/KnutZuidema/cli"
 )
 
 func applyCmd() *cli.Command {

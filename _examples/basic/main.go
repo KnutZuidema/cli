@@ -4,13 +4,13 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/go-clix/cli"
+	"github.com/KnutZuidema/cli"
 )
 
-func main(){
+func main() {
 	// create the root command
 	rootCmd := cli.Command{
-		Use: "greet",
+		Use:   "greet",
 		Short: "print a message",
 		Run: func(cmd *cli.Command, args []string) error {
 			fmt.Println("Hello from Cli-X!")
